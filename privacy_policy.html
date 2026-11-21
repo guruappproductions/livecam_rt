@@ -42,7 +42,7 @@
   <li>power the compass, speedometer, trip history, coordinates finder and "Near Me" search;</li>
   <li>show live flights in the area around you.</li>
 </ul>
-<p>We do not sell your location and we do not store it on our servers. When a feature needs it, a location or map area is sent to the service providers listed in Section 5 (for example, Apple for addresses and nearby search, OpenSky Network for flights in the visible map area, or Google when you open Google Street View for a place).</p>
+<p>We do not sell your location and we do not store it on our servers. When a feature needs it, a location or map area is sent to the service providers listed in Section 5 (for example, Apple for addresses and nearby search, OpenSky Network for flights in the visible map area, or our street-level imagery provider when you open street view for a place).</p>
 
 <h3>2.2 Camera and photos</h3>
 <p>The camera is used only when you open the GPS Camera. Photos are processed on your device to add the location stamp. When you tap <strong>Catch this moment</strong> on a live camera, the App takes a picture of what is on your screen to make a postcard; this also stays on your device. A photo or postcard is saved to your photo library only when you tap <strong>Save</strong>, using "add only" access; Wanderpost cannot read the other photos in your library. When you choose a photo from your library, only that photo is shared with the App through the system photo picker. We do not upload your photos or postcards.</p>
@@ -51,14 +51,14 @@
 <p>Wanderpost stores data locally on your device, such as your postcards and the notes you write on them, your passport stamps and streak, your planned trips and packing lists, saved speedometer trips, your saved parking spot, World Clock cities, selected language, units, reminder setting and cached images. This data stays on your device and is deleted when you delete the App. You can remove postcards and trips inside the App and clear cached images in Settings.</p>
 
 <h3>2.4 Advertising and tracking</h3>
-<p>The free version of Wanderpost shows ads served by Google AdMob. AdMob may collect device identifiers (including the advertising identifier, IDFA, if you allow tracking), approximate location derived from your IP address, and information about ad interactions, to show and measure ads. On first launch iOS asks whether you allow tracking; if you choose "Ask App Not to Track", the IDFA is not shared and ads are not personalised using it. Where required (for example in the EEA and UK), a consent form lets you choose how your data is used for ads. You can change tracking permission at any time in iOS Settings &gt; Privacy &amp; Security &gt; Tracking. Premium subscribers do not see ads.</p>
+<p>The free version of Wanderpost shows ads served by a third-party advertising network. The ad network may collect device identifiers (including the advertising identifier, IDFA, if you allow tracking), approximate location derived from your IP address, and information about ad interactions, to show and measure ads. On first launch iOS asks whether you allow tracking; if you choose "Ask App Not to Track", the IDFA is not shared and ads are not personalised using it. Where required (for example in the EEA and UK), a consent form lets you choose how your data is used for ads. You can change tracking permission at any time in iOS Settings &gt; Privacy &amp; Security &gt; Tracking. Premium subscribers do not see ads.</p>
 
 <h3>2.5 Analytics, crash reports and session insights</h3>
 <p>To understand how the App is used and to fix problems, we use:</p>
 <ul>
-  <li><strong>Firebase Analytics</strong> (Google): anonymous usage events such as screens opened and features used, plus device and app version information;</li>
-  <li><strong>Firebase Crashlytics</strong> (Google): crash reports with device state and app version at the time of the crash;</li>
-  <li><strong>Firebase Remote Config</strong> (Google): app settings we can change without an update;</li>
+  <li><strong>An analytics service</strong>: anonymous usage events such as screens opened and features used, plus device and app version information;</li>
+  <li><strong>A crash reporting service</strong>: crash reports with device state and app version at the time of the crash;</li>
+  <li><strong>A remote configuration service</strong>: app settings we can change without an update;</li>
   <li><strong>Microsoft Clarity</strong>: session replays and heatmaps showing how screens are used (taps, scrolling, screens visited) to improve the design. Clarity masks text you type.</li>
 </ul>
 <p>This data is not linked to your name or email, and we do not use it to identify you.</p>
@@ -91,10 +91,10 @@
 <table>
   <tr><th>Service</th><th>Used for</th><th>What is sent</th></tr>
   <tr><td>Apple (MapKit, Look Around, App Store)</td><td>Maps, satellite and 3D views, street-level imagery, addresses, place search, purchases</td><td>Map areas, searched places, your location when you use location features</td></tr>
-  <tr><td>Google Maps (Street View, web)</td><td>Street View where Apple has no street-level imagery</td><td>The coordinates of the place you open, and standard data your device sends when loading a web page</td></tr>
-  <tr><td>YouTube (Google)</td><td>Playing public live camera streams and their preview images</td><td>Standard data your device sends when loading an embedded video</td></tr>
-  <tr><td>Google AdMob</td><td>Showing ads in the free version</td><td>Device and ad identifiers (IDFA only if you allow tracking), IP address, ad interactions</td></tr>
-  <tr><td>Google Firebase (Analytics, Crashlytics, Remote Config)</td><td>Usage statistics, crash reports, remote settings</td><td>App usage events, crash logs, device model, OS and app version, app instance ID</td></tr>
+  <tr><td>Street-level imagery provider (web)</td><td>Street view where Apple has no street-level imagery</td><td>The coordinates of the place you open, and standard data your device sends when loading a web page</td></tr>
+  <tr><td>Video platform</td><td>Playing public live camera streams and their preview images</td><td>Standard data your device sends when loading an embedded video</td></tr>
+  <tr><td>Advertising network</td><td>Showing ads in the free version</td><td>Device and ad identifiers (IDFA only if you allow tracking), IP address, ad interactions</td></tr>
+  <tr><td>Analytics, crash reporting and remote configuration services</td><td>Usage statistics, crash reports, remote settings</td><td>App usage events, crash logs, device model, OS and app version, app instance ID</td></tr>
   <tr><td>Microsoft Clarity</td><td>Session replays and heatmaps</td><td>Screen interactions (taps, scrolls, screens visited), device model and OS</td></tr>
   <tr><td>RevenueCat</td><td>Managing subscriptions</td><td>Anonymous app user ID, purchase receipts and subscription status</td></tr>
   <tr><td>GitHub</td><td>Downloading the live camera and landmark lists</td><td>Standard data your device sends when downloading a file</td></tr>
@@ -106,7 +106,7 @@
 <p>When you share a postcard or photo, it goes to the app or person you choose through the iOS share sheet. We may also disclose information if required by law or to protect the rights and safety of users and others.</p>
 
 <h2>6. Storage and retention</h2>
-<p>Data stored by the App stays on your device until you delete it or remove the App. Data collected by the third-party services above is kept according to their own retention policies (for example, Firebase Analytics data is kept for up to 14 months). Support emails are kept only as long as needed to resolve your request.</p>
+<p>Data stored by the App stays on your device until you delete it or remove the App. Data collected by the third-party services above is kept according to their own retention policies (for example, analytics data is kept for up to 14 months). Support emails are kept only as long as needed to resolve your request.</p>
 
 <h2>7. Your choices and rights</h2>
 <ul>
